@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In</title>
+
+    <link
+      rel="shortcut icon"
+      href="../assets/office_of_the_dni_icon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="./signIn.css" />
+
+    <script
+      src="https://kit.fontawesome.com/d28c160745.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="./signIn.js" defer></script>
+    <script src="../forwardBtn.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section class="log-in-container">
+        <div class="margin-container">
+          <div class="main-container">
+            <div class="logo-container">
+              <img
+                src="../assets/office_of_the_dni_icon.png"
+                alt="National Intelligence Council logo"
+              />
+              <h2 class="logo-title">National Intelligence Council</h2>
+            </div>
+            <div class="user-container">
+              <img src="./signIn assets/Profile pic.png" alt="Profile pic" />
+              <div class="welcome-container">
+                <h1>Welcome Naomi</h1>
+                <h3>To continue, please create a password.</h3>
+              </div>
+            </div>
+            <div class="form-container">
+              <form action="#" method="post">
+                <div class="password-containers">
+                  <div class="password-container">
+                    <label for="password">Password</label>
+                    <div class="input-container">
+                      <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        placeholder="Start typing..."
+                      />
+                      <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div class="prompt-msg-container">
+                      <p class="msg-text">
+                        "Your password must be at least 8 characters long and
+                        include at least one character of all listed below:
+                      </p>
+                      <ul>
+                        <li>Lowercase</li>
+                        <li>Uppercase</li>
+                        <li>Number</li>
+                        <li>Special character</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="password-container">
+                    <label for="confirm-password">Confirm Password</label>
+                    <div class="input-container">
+                      <input
+                        type="password"
+                        name="confirm-password"
+                        id="confirm-password"
+                        placeholder="Start typing..."
+                      />
+                      <i class="fa-solid fa-lock"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="submit-container">
+                  <a
+                    class="button link disabled"
+                    id="submitBtn"
+                    href="#"
+                    tabindex="-1"
+                    >Create account</a
+                  >
+                </div>
+              </form>
+            </div>
+            <div class="submitted-form-container">
+              <div>
+                <p class="confirmation-msg-container">
+                  Your password is submitted!
+                </p>
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <i class="fa-solid fa-spinner"></i>
+            </div>
+          </div>
+          <div class="footer-container">
+            <p>
+              If you encounter any technical issues, please reach out to our
+              support team at
+              <a class="link" href="#">tech-support@mind-alliance.com</a>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="image-container">
+        <img src="./signIn assets/Blob1.png" alt="Blob1" />
+        <img src="./signIn assets/Blob2.png" alt="Blob2" />
+        <img src="./signIn assets/Office.png" alt="Office" />
+      </section>
+    </main>
+  </body>
+</html>

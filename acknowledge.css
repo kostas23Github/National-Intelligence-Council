@@ -1,0 +1,168 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* For the child elements(main) to be placed at the center, the parent(body) must have its size set(width, height). */
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Lato;
+  font-size: var(--font-size);
+  max-width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+/* Set its size relative to the parent(body) element, the place elements so that are stacked vertically, and occupy all available space. */
+main {
+  width: 56%;
+  min-height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* < Logo Container > */
+
+div.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.logo-container > h2.logo-title {
+  margin-top: 12px;
+}
+
+/* </ Logo Container > */
+
+h1 {
+  width: max-content;
+  margin: 30px auto;
+}
+
+/* < Info Container > */
+
+div.info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  padding: 0 20px; /* To account for the :marker being outside & the design requires padding. */
+}
+
+li.guideline-item {
+  margin-top: 14px;
+}
+
+/* < /Info Container > */
+
+/* < Acknowledge Container */
+
+div.acknowledge-container {
+  display: flex;
+  align-items: start;
+  margin: 24px 0;
+}
+
+div.acknowledge-container > i {
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 3px 4px;
+  color: var(--primary-color);
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+/* For when is checked(mimics checkbox behavior. */
+div.acknowledge-container > i[aria-pressed="true"] {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+/* < /Acknowledge Container */
+
+/* < Buttons Container */
+
+.btns-container {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.btns-container > a.button {
+  border: 1px solid var(--primary-color);
+  border-radius: var(--btn-radius);
+  flex: 0 1 150px;
+  line-height: 44px; /* To make them taller. */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+a.button#nextPage {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+/* < /Buttons Container */
+
+/* < Footer Container > */
+
+div.footer-container {
+  font-size: 12px;
+  color: #8181A5;
+}
+
+div.footer-container > p {
+  text-align: center;
+}
+
+/* < /Footer Container > */
+
+
+/* < Responsiveness > */
+
+@media (max-width: 500px) {
+  h1 {
+    width: inherit;
+    margin-left: 0;
+    margin-right: 0;
+    line-height: 32px;
+  }
+
+  main {
+    width: 90%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  .btns-container > a.button {
+    line-height: 35px;
+    flex: 0 1 120px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  main {
+    width: 80%;
+  }
+}
+
+/* For smaller height screens this property is set to space-between thus stretching items vertically as the screen increases in height. */
+@media (min-height: 1150px) {
+  main {
+    justify-content: center;
+  }
+}
+
+/* < /Responsiveness > */

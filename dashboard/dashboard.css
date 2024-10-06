@@ -1,0 +1,512 @@
+/* Universal */
+
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* < Navbar Container > */
+
+nav.navbar-container {
+  display: flex;
+  width: 100%;
+  height: 92px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 32px;
+}
+
+div.logo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  flex: 0 1 228px;
+}
+
+div.logo-container > img {
+  width: 60px;
+  height: 60px;
+}
+
+nav.navbar-container > div.user-container {
+  display: flex;
+  flex: 0 1 228px;
+  justify-content: end;
+  align-items: center;
+  gap: 24px;
+}
+
+div.user-container > * {
+  cursor: pointer;
+}
+
+div.user-container > div.fa-bell-container {
+  position: relative;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ececf2;
+  border-radius: 5px;
+}
+
+div.fa-bell-container > i {
+  color: var(--third-color);
+}
+
+div.fa-bell-container > i::after {
+  content: "";
+  width: 6.4px;
+  height: 6.4px;
+  position: absolute;
+  top: 23%;
+  right: 28%;
+  background-color: #ff0000;
+  outline: 1px solid #ffffff;
+  border: 0.5px solid #ff0000;
+  border-radius: 50%;
+}
+
+div.user-container > div:nth-child(2) {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.user-container > div:nth-child(2) > h5 {
+  line-height: 28px;
+}
+
+div.user-container > img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}
+
+/* </ Navbar Container > */
+
+/* < Below Navbar Section > */
+
+section.below-navbar-container {
+  height: 58px;
+  padding: 0 32px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+div.getInContact-container {
+  width: 166px;
+  height: 38px;
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+}
+
+div.active-contacts-container {
+  width: 104px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-container {
+  width: 36px;
+  height: 36px;
+  position: relative;
+}
+
+.contact-container > img {
+  width: inherit; /* Gets the value of the closest ancestor the has one, in this case the parent. */
+  height: inherit;
+  border-radius: 50%;
+}
+
+/* This CSS selector, targets the second direct child element with the class .contact-container inside a parent div element with the class .active-contacts-container. */
+div.active-contacts-container > .contact-container:nth-child(2) {
+  transform: translateX(-10px);
+}
+
+div.active-contacts-container > .contact-container:nth-child(3) {
+  transform: translateX(-20px);
+}
+
+div.active-contacts-container > .contact-container:nth-child(4) {
+  transform: translateX(-30px);
+}
+
+/* This CSS selector targets all .contact-container elements that are direct children of div.active-contacts-container, and applies styles to their ::after pseudo-element. The styles are the online dot. */
+div.active-contacts-container > .contact-container::after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  bottom: 0;
+  right: 4px;
+  background-color: #7ce7ac;
+  outline: 1px solid #ffffff;
+  border: 0.5px solid #7ce7ac;
+  border-radius: 50%;
+}
+
+/* This is the offline dot. */
+div.active-contacts-container > .contact-container:first-child::after {
+  background-color: #ffffff;
+}
+
+div.msg-container {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ececf2;
+  border-radius: 5px;
+}
+
+div.msg-container > i {
+  color: var(--third-color);
+  cursor: pointer;
+}
+
+/* </ Below Navbar Container > */
+
+/* < Main > */
+main {
+  width: 100%;
+  display: flex;
+  margin-bottom: 40px;
+}
+
+/* 59 + 890 + 59 + 432(30%) */
+/* ~4% + ~62% + ~4% */
+
+/* < Section New Theme Container > */
+
+section.new-theme-container {
+  width: 62%;
+  margin: 0 4%;
+}
+
+/* < Div Create New Theme Container > */
+
+div.create-new-theme-container {
+  height: 194px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+div.theme-titles-container {
+  display: flex;
+  gap: 4px;
+}
+
+div.theme-title-container {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  background-color: #dee5ff;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+div.theme-title-container.active {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+div.theme-title-container.topic-container {
+  width: 90px;
+  height: 40px;
+}
+
+div.theme-title-container.question-container {
+  width: 117px;
+  height: 40px;
+}
+
+div.theme-title-container.article-container {
+  width: 102px;
+  height: 40px;
+}
+
+div.theme-title-container > p.theme-title-text {
+  font-size: var(--font-size-smaller);
+  font-weight: 900;
+}
+
+div.theme-text-container {
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 0.5px solid #ececf2;
+  border-radius: 10px;
+  padding: 16px 20px;
+}
+
+div.theme-text-container.hidden {
+  display: none;
+}
+
+div.theme-text-container > textarea {
+  height: 31px;
+  background-color: inherit;
+  border: none;
+  font-family: inherit;
+  font-size: var(--font-size);
+}
+
+div.theme-text-container > textarea:focus {
+  outline: none;
+}
+
+div.theme-text-container > textarea:placeholder-shown {
+  font-size: var(--h2-font-size);
+  color: #8181a580;
+}
+
+div.theme-text-container > p.submit {
+  color: var(--third-color);
+}
+
+/* </ Div Create New Theme Container > */
+
+/* < Div Go To Container > */
+
+div.go-to-container {
+  margin-top: 64px;
+}
+
+div.go-to-container > h3 {
+  line-height: 42px;
+}
+
+div.go-to-contents-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+div.go-to-content-container {
+  height: 70px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 16px 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px #8b8b8b33;
+}
+
+div.go-to-content-container:hover > div.go-to-btn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+div.icon-container {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.go-to-content-container > h4 {
+  height: 28px;
+  line-height: 28px;
+  flex-grow: 1;
+}
+
+div.go-to-btn {
+  width: 38px;
+  height: 38px;
+  color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* < Div Footer Container > */
+
+div.footer-container {
+  height: 124px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.contact-info-container {
+  height: 100%;
+  flex: 0 1 324px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+div.info-container {
+  height: 100%;
+  flex: 0 1 387px;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.info-container > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+div.info-container div.empty {
+  height: 16.36px;
+}
+
+/* </ Div Footer Container > */
+
+/* </ Div Go To Container > */
+
+/* < Section Popular Themes Container > */
+
+section.popular-themes-container {
+  width: 30%;
+  height: max-content;
+  border-left: 1px solid #ececf2;
+  border-right: 1px solid #ececf2;
+  color: var(--third-color);
+}
+
+/* Changed the font color of this section to --third-color(grey), hence had to declare the (--text-color)black on every h tag. */
+section.popular-themes-container h1,
+section.popular-themes-container h2,
+section.popular-themes-container h3,
+section.popular-themes-container h4,
+section.popular-themes-container h5 {
+  color: var(--text-color);
+}
+
+div.most-active-themes {
+  height: max-content;
+  margin: 16px 32px;
+  border: 1px solid #ececf2;
+  border-radius: 12px;
+}
+
+/* This class represents all container items of expandable content. */
+div.most-active-themes.expand > div.theme,
+div.newest-themes.expand > div.theme {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 15px 20px;
+  transform: scaleY(1);
+  transition: transform .5s ease .1s;
+}
+
+div.most-active-themes > div.theme,
+div.newest-themes > div.theme {
+  display: none;
+  transform: scaleY(0);
+  transition: transform .5s ease .1s;
+}
+
+div.theme > div.published-date-container {
+  min-height: max-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+div.most-active-themes-expandable {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+div.most-active-themes-expandable > h5 {
+  flex: 0 1 70%;
+}
+
+section.popular-themes-container div.icon-container {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #ececf2;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+section.popular-themes-container div.icon-container > i.fa-angle-down,
+section.popular-themes-container
+  div.icon-container
+  > i.fa-angle-down.fa-rotate-180 {
+  transition: 200ms ease-in;
+}
+
+div.newest-themes {
+  height: max-content;
+  margin: 16px 32px;
+  border: 1px solid #ececf2;
+  border-radius: 12px;
+}
+
+div.newest-themes-expandable {
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+div.newest-themes-expandable > * {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.newest-themes .icon-container.fa-angle-up-container {
+  display: none;
+}
+
+div.newest-themes-subheader > p {
+  line-height: 21px;
+  flex: 0 1 60%;
+}
+
+div.newest-themes-subheader > p.link {
+  text-decoration: underline;
+  flex-basis: 51px;
+}
+
+/* This p elem starts at 100px. It cannot shrink beyond that(0 flex shrink) but can grow as long as there is available space. */
+div.published-date-container > p {
+  flex: 1 0 100px;
+}
+
+/* This elem(sibling of above p elem) starts at 116px, which is its full width for a single row, cannot grow beyond that but can shrink if there is no space. */
+div.publishers-container {
+  display: flex;
+  justify-content: end;
+  gap: 4px;
+  flex: 0 1 116px;
+  flex-wrap: wrap;
+}
+
+div.publishers-container > span {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*   </ Section Popular Themes Container > */
+/* </ Main > */

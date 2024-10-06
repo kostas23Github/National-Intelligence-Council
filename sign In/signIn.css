@@ -1,0 +1,344 @@
+/* Universal */
+
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* < Main Container > */
+/* Contains both sections. */
+main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+}
+
+/* < Section 1> */
+
+/* This container displays the rounded right corners. */
+section.log-in-container {
+  position: relative;
+  z-index: 1;
+  width: 55%;
+  border: 0.1px solid #f5f5f5;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* This container has all the content & handles the top-bottom margins. */
+div.margin-container {
+  width: 100%;
+  min-height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* This container has all content of margin-container but the footer. */
+div.main-container {
+  width: 45%;
+  margin: 0 auto;
+  flex: 1 0 650px;
+}
+
+/* < Logo Container > */
+
+/* This container has logo & logo title. It is the same as the previous page.*/
+div.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.logo-container > h2.logo-title {
+  margin-top: 12px;
+}
+
+/* </ Logo Container > */
+
+/* < User Container > */
+
+/* This container has user-image & welcome msg. */
+div.user-container {
+  display: flex;
+  margin-top: 30px;
+}
+
+div.user-container > img {
+  width: 80px;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+/* This container has welcome msg. */
+div.welcome-container {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+div.welcome-container > h1 {
+  line-height: var(
+    --h1-font-size
+  ); /* If left at 42px this text is aligned more downwards. */
+}
+
+/* </ User Container > */
+
+/* < Form Container > */
+
+div.form-container {
+  height: 30%;
+  /* display: none; */
+}
+
+div.form-container > form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+div.password-container:first-child {
+  margin: 20px 0;
+}
+
+div.input-container {
+  border-bottom: 1px solid #cccccc;
+  display: flex;
+  margin-top: 4px;
+}
+
+div.input-container > input {
+  flex-grow: 1;
+}
+
+div.input-container > i {
+  color: var(--third-color); /* Same color as label. */
+}
+
+div.prompt-msg-container {
+  padding: 2px 6px;
+  color: var(--third-color);
+  display: block;
+}
+
+div.prompt-msg-container.disabled {
+  display: none;
+}
+
+div.submit-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+div.submit-container > a.button.link {
+  flex: 0 1 150px;
+  line-height: 44px; /* To make it taller. */
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+/* </ Form Container > */
+
+/* < Submitted Form Container > */
+
+div.submitted-form-container {
+  width: 80%;
+  padding: 30px 0px;
+  margin: 100px auto;
+  display: flex;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 50px #8181a588;
+  background: radial-gradient(
+    ellipse at center,
+    var(--secondary-color) 65%,
+    #8181a52f
+  );
+}
+
+div.submitted-form-container > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+div.submitted-form-container > i {
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* </ Submitted Form Container > */
+
+/* < Footer Container > */
+
+div.footer-container {
+  font-size: 12px;
+  color: #8181a5;
+  width: 70%;
+  margin: 0 auto;
+}
+
+div.footer-container > p {
+  text-align: center;
+}
+
+/* </ Footer Container > */
+
+/* </ Section 1> */
+
+/* <Section 2> */
+
+section.image-container {
+  position: relative;
+  flex-grow: 1;
+  background: radial-gradient(var(--primary-color), #1b51e5);
+  transform: scaleX(
+    1.03
+  ); /* To make this container slide underneath the login container & make visible the rounded borders. */
+  transform-origin: right;
+  overflow: hidden;
+}
+
+section.image-container > img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* </ Section 2> */
+
+/* < Responsiveness > */
+
+@media (max-width: 450px) {
+  div.main-container {
+    width: 90%;
+  }
+
+  div.user-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  div.user-container > img {
+    width: 110px;
+  }
+
+  div.welcome-container {
+    margin-left: 0;
+  }
+
+  div.welcome-container > * {
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+}
+
+@media (min-width: 450.1px) and (max-width: 600px) {
+  div.main-container {
+    width: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  section.log-in-container {
+    width: 100%;
+  }
+
+  section.image-container {
+    display: none;
+  }
+}
+
+@media (min-width: 600.1px) and (max-width: 700px) {
+  section.log-in-container {
+    width: 70%;
+  }
+
+  div.main-container {
+    width: 70%;
+  }
+}
+
+@media (min-width: 700.1px) and (max-width: 1000px) {
+  section.log-in-container {
+    width: 62.5%;
+  }
+
+  div.main-container {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1000px) {
+  h3 {
+    font-size: var(--h5-font-size);
+  }
+}
+
+@media (min-width: 1000.1px) and (max-width: 1330px) {
+  div.main-container {
+    width: 60%; /* Above this screen size width is set at 45% in main code flow. */
+  }
+}
+
+@media (max-height: 750px) {
+  body {
+    overflow-y: visible;
+  }
+
+  body,
+  main {
+    height: inherit;
+  }
+
+  div.margin-container {
+    height: inherit;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  div.submitted-form-container {
+    margin: 50px auto;
+  }
+}
+
+/* For smaller height screens this property is set to space-between thus stretching items vertically as the screen increases in height. */
+@media (min-height: 900px) {
+  div.margin-container {
+    min-height: 80%;
+  }
+
+  div.user-container {
+    margin-top: 5vh;
+  }
+}
+
+@media (min-height: 1400px) {
+  div.margin-container {
+    min-height: 70%;
+  }
+}
+
+/* < /Responsiveness > */
