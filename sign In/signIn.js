@@ -1,9 +1,7 @@
 // Input validation
-window.onpageshow = function(event) {
-  // if (event.persisted) {  // If the page is loaded from the cache
-      document.getElementById(document.querySelector(".form-container > form")).reset(); // Reset form fields
-  // }
-};
+// window.onpageshow = function (event) {
+//   document.querySelector()
+// };
 
 const password = document.querySelector('input[name="password"]');
 const confirmPassword = document.querySelector(
@@ -11,7 +9,9 @@ const confirmPassword = document.querySelector(
 );
 const submitBtn = document.querySelector("#submitBtn");
 const promptMsgContainer = document.querySelector(".prompt-msg-container");
-const submittedFormContainer = document.querySelector(".submitted-form-container");
+const submittedFormContainer = document.querySelector(
+  ".submitted-form-container"
+);
 const formContainer = document.querySelector(".form-container");
 
 // Given an input element this function validates it's value based on a regex.
@@ -90,5 +90,10 @@ submitBtn.addEventListener("click", (event) => {
 
   setTimeout(() => {
     window.location.href = "../dashboard/dashboard.html";
-  }, 2000);
+  }, 1000);
+
+  setTimeout(() => {
+    formContainer.style.display = "block";
+    submittedFormContainer.style.display = "none";
+  }, 3000);
 });
