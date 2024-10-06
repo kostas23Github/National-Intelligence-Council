@@ -1,4 +1,9 @@
 // Input validation
+window.onpageshow = function(event) {
+  if (event.persisted) {  // If the page is loaded from the cache
+      document.getElementById(document.querySelector(".form-container > form")).reset(); // Reset form fields
+  }
+};
 
 const password = document.querySelector('input[name="password"]');
 const confirmPassword = document.querySelector(
