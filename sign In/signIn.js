@@ -95,5 +95,5 @@ submitBtn.addEventListener("click", (event) => {
   setTimeout(() => {
     formContainer.style.display = "block";
     submittedFormContainer.style.display = "none";
-  }, 3000);
+  }, 1500);
 });
