@@ -112,10 +112,12 @@ div.input-container {
   border-bottom: 1px solid #cccccc;
   display: flex;
   margin-top: 4px;
+  background-color: inherit;
 }
 
 div.input-container > input {
   flex-grow: 1;
+  background-color: inherit;
 }
 
 div.input-container > i {
