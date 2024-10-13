@@ -232,8 +232,13 @@ section.image-container > img {
 /* < Responsiveness > */
 
 @media (max-width: 450px) {
+  body {
+    overflow-y: visible;
+  }
+  
   div.main-container {
     width: 90%;
+    flex: 1 0 760px;
   }
 
   div.user-container {
