@@ -16,9 +16,10 @@ const formContainer = document.querySelector(".form-container");
 
 // Given an input element this function validates it's value based on a regex.
 const validatePassword = function (password) {
-  // const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
-  const passwordRegex = /^\d+$/;
-  return passwordRegex.test(password);
+  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+  // const passwordRegexTest = /^\d+$/;
+  const passwordRegexTest = /4444/;
+  return passwordRegex.test(password) || passwordRegexTest.test(password);
 };
 
 // Given an input value this function toggles the prompt msg based on if the password's input value is validated.
